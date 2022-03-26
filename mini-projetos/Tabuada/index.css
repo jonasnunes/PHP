@@ -1,0 +1,17 @@
+.box{
+    width: 500px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+fieldset{
+    height: 20vh;
+    border-radius: 0 .5rem .5rem .5rem;
+    display: flex;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
