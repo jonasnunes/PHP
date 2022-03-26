@@ -1,0 +1,38 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#corpo{
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+fieldset{
+    width: 700px;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 0 .5rem .5rem .5rem;
+    box-shadow: 1px 3px 8px #000;
+}
+
+.button{
+    padding: .5rem;
+    margin-top: .7rem;
+}
+
+.code{
+    margin: 2rem auto;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.pesoNormal{
+    color: green;
+    letter-spacing: .2rem;
+}
+
+.msgPerigo{
+    color: red;
+    font-weight: bold;
+    letter-spacing: .2rem;
+}
