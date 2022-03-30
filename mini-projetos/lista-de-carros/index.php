@@ -12,8 +12,8 @@
 
     <?php
         // se houver algum erro, exibe uma mensagem e não executa o programa
-        require_once "includes/banco.php";
-        require_once "includes/funcoes.php";
+        require_once "_includes/banco.php";
+        require_once "_includes/funcoes.php";
     ?>
 
     <div id="corpo">
@@ -37,7 +37,7 @@
                         // use o laço de repetição para exibir tudo que foi encontrado
                         while($registro = $busca->fetch_object()){
                             $t = thumb($registro->logo);
-                            echo "<tr><td><img src='$t' class='mini'/><td>$registro->modelo";
+                            echo "<tr><td><img src='$t'/><td>$registro->modelo";
                             echo "<td>Adm";
                         }
                     }
