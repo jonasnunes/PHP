@@ -29,7 +29,7 @@
                 }
                 else{
                     // se a busca não retornar nenhuma linha, exiba a mensagem
-                    if(!$busca->num_rows == 0){
+                    if($busca->num_rows == 0){
                         echo "<tr><td>Nenhum registro encontrado!</td></tr>";
                     }
                     // se a busca for realizada com sucesso
