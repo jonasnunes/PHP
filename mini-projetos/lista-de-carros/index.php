@@ -11,6 +11,7 @@
 <body>
 
     <?php
+        // se houver algum erro, exibe uma mensagem e não executa o programa
         require_once "includes/banco.php";
         require_once "includes/funcoes.php";
     ?>
@@ -20,15 +21,20 @@
         <table class="listagem">
 
             <?php
-                $busca = $banco->query("select * from bd_carros order by nome");
+                // criando o objeto $busca com a query necessária
+                $busca = $banco->query("select * from bd_carros");
+                // se a busca não acontecer, retorne uma mensagem de erro
                 if(!$busca){
                     echo "<tr><td>Erro na busca! Tente novamente...</td></tr>";
                 }
                 else{
+                    // se a busca não retornar nenhuma linha, exiba a mensagem
                     if(!$busca->num_rows == 0){
                         echo "<tr><td>Nenhum registro encontrado!</td></tr>";
                     }
+                    // se a busca for realizada com sucesso
                     else{
+                        // use o laço de repetição para exibir tudo que foi encontrado
                         while($registro = $busca->fetch_object()){
                             $t = thumb($registro->logo);
                             echo "<tr><td><img src='$t' class='mini'/><td>$registro->modelo";
@@ -42,6 +48,7 @@
     </div>
 
     <?php
+        // fechando o banco após o término da execução
         $banco->close();
     ?>
 </body>
