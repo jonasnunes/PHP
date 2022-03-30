@@ -22,7 +22,7 @@
 
             <?php
                 // criando o objeto $busca com a query necessária
-                $busca = $banco->query("select * from bd_carros");
+                $busca = $banco->query("select * from fabricante");
                 // se a busca não acontecer, retorne uma mensagem de erro
                 if(!$busca){
                     echo "<tr><td>Erro na busca! Tente novamente...</td></tr>";
@@ -37,7 +37,7 @@
                         // use o laço de repetição para exibir tudo que foi encontrado
                         while($registro = $busca->fetch_object()){
                             $t = thumb($registro->logo);
-                            echo "<tr><td><img src='$t'/><td>$registro->modelo";
+                            echo "<tr><td><img src='$t'/><td>$registro->nome";
                             echo "<td>Adm";
                         }
                     }
