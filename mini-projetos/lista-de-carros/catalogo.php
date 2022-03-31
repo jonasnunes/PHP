@@ -53,6 +53,7 @@
                 }
             }
         ?>
+        <a href="index.php"><img src="_icones/icoback.png"></a>
     </div>
 </body>
 </html>

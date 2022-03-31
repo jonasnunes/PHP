@@ -47,7 +47,7 @@
             ?>
 
         </table>
-        <p><a href="catalogo.php">Exibir catálogo</a></p>
+        <p><a class="button" href="catalogo.php">Exibir catálogo</a></p>
     </div>
 
     <?php
