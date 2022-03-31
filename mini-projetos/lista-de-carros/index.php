@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo de Carros</title>
 
-    <link rel="stylesheet" href="./_estilos/index.css">
+    <link rel="stylesheet" href="_estilos/estilo.css">
 </head>
 <body>
 
@@ -18,6 +18,8 @@
 
     <div id="corpo">
         <h1>Catálogo de Carros</h1>
+        <h3>Marcas parceiras</h3>
+        <hr>
         <table class="listagem">
 
             <?php
@@ -37,7 +39,7 @@
                         // use o laço de repetição para exibir tudo que foi encontrado
                         while($registro = $busca->fetch_object()){
                             $t = thumb($registro->logo);
-                            echo "<tr><td><img src='$t'/><td>$registro->nome";
+                            echo "<tr><td><img src='$t' width=50/><td>$registro->nome";
                             echo "<td>Adm";
                         }
                     }
@@ -45,6 +47,7 @@
             ?>
 
         </table>
+        <p><a href="catalogo.php">Exibir catálogo</a></p>
     </div>
 
     <?php
