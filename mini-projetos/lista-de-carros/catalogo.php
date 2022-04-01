@@ -7,17 +7,6 @@
     <title>Catálogo</title>
 
     <link rel="stylesheet" href="_estilos/estilo.css">
-
-    <style>
-        .lista{
-            border: 1px solid #000;
-            padding: 1rem;
-            margin-bottom: .5rem;
-        }
-        .destaque{
-            font-weight: bold;
-        }
-    </style>
 </head>
 <body>
     <?php
@@ -25,8 +14,16 @@
         require_once "_includes/funcoes.php";
     ?>
     <div id="corpo">
+        <?php include_once "topo.php"; ?>
         <h1>Catálogo de carros</h1>
         <hr>
+
+        <form method="get" action="catalogo.php">
+            <label for="busca">Ordenar por: Nome | Fabricante | Ano | Combustível | </label>
+            <label for="busca">Buscar: </label>
+            <input type="text" name="busca" size="10" maxlength="40">
+            <input type="submit" value="Ok">
+        </form>
 
         <?php
             $buscaCarros = $banco->query("select * from modelo");
@@ -41,6 +38,7 @@
                     while($registro = $buscaCarros->fetch_object()){
                         echo "<div class='lista'>";
                             echo "<p><span class='destaque'>Nome:</span> $registro->nome</p>";
+                            echo "<p><span class='destaque'>Fabricante:</span> $registro->fabricante</p>";
                             echo "<p><span class='destaque'>Ano:</span> $registro->ano</p>";
                             echo "<p><span class='destaque'>Placa:</span> $registro->placa</p>";
                             echo "<p><span class='destaque'>Cor:</span> $registro->cor</p>";
@@ -55,5 +53,8 @@
         ?>
         <a href="index.php"><img src="_icones/icoback.png"></a>
     </div>
+    <?php
+        include_once "rodape.php";
+    ?>
 </body>
 </html>

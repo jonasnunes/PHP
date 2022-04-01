@@ -17,6 +17,7 @@
     ?>
 
     <div id="corpo">
+        <?php include_once "topo.php"; ?>
         <h1>Catálogo de Carros</h1>
         <h3>Marcas parceiras</h3>
         <hr>
@@ -40,7 +41,7 @@
                         while($registro = $busca->fetch_object()){
                             $t = thumb($registro->logo);
                             echo "<tr><td><img src='$t' width=50/><td>$registro->nome";
-                            echo "<td>Adm";
+                            echo "<td>";
                         }
                     }
                 }
@@ -51,8 +52,7 @@
     </div>
 
     <?php
-        // fechando o banco após o término da execução
-        $banco->close();
+        include_once "rodape.php";
     ?>
 </body>
 </html>
