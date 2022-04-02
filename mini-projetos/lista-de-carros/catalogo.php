@@ -12,6 +12,8 @@
     <?php
         require_once "_includes/banco.php";
         require_once "_includes/funcoes.php";
+        $ordem = $_GET['o'] ?? "nome";
+        $chave = $_GET['busca'] ?? "";
     ?>
     <div id="corpo">
         <?php include_once "topo.php"; ?>
@@ -19,14 +21,41 @@
         <hr>
 
         <form method="get" action="catalogo.php">
-            <label for="busca">Ordenar por: Nome | Fabricante | Ano | Combustível | </label>
+            <label for="busca">Ordenar por: 
+                <a href="catalogo.php?o=nome&busca=<?php echo $chave;?>">Nome</a> | 
+                <a href="catalogo.php?o=fabricante&busca=<?php echo $chave;?>">Fabricante</a> | 
+                <a href="catalogo.php?o=ano&busca=<?php echo $chave;?>">Ano</a> | 
+                <a href="catalogo.php?o=combustivel&busca=<?php echo $chave;?>">Combustível</a> | 
+                <a href="catalogo.php">Mostrar Todos</a> |
+            </label>
             <label for="busca">Buscar: </label>
             <input type="text" name="busca" size="10" maxlength="40">
             <input type="submit" value="Ok">
         </form>
 
         <?php
-            $buscaCarros = $banco->query("select * from modelo");
+            $query = "select * from modelo ";
+
+            if(!empty($chave)){
+                $query .= "where nome like '%$chave%' or fabricante like '%$chave%' or ano like '%$chave%' or combustivel like '%$chave%' ";
+            }
+
+            switch($ordem){
+                case "fabricante":
+                    $query .= "order by fabricante";
+                    break;
+                case "ano":
+                    $query .= "order by ano";
+                    break;
+                case "combustivel":
+                    $query .= "order by combustivel";
+                    break;
+                default:
+                    $query .= "order by nome";
+                    break;
+            }
+
+            $buscaCarros = $banco->query($query);
             if(!$buscaCarros){
                 echo "<tr><td>Erro na busca! Tente novamente...";
             }
