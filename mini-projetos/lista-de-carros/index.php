@@ -31,7 +31,7 @@
                     echo "<tr><td>Erro na busca! Tente novamente...</td></tr>";
                 }
                 else{
-                    // se a busca não retornar nenhuma linha, exiba a mensagem
+                    // se a busca não retornar nenhuma linha, exiba a mensagem!
                     if($busca->num_rows == 0){
                         echo "<tr><td>Nenhum registro encontrado!</td></tr>";
                     }
