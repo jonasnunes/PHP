@@ -9,25 +9,9 @@
     <link rel="stylesheet" href="_estilos/index.css">
 </head>
 <body>
-    <header>
-        <div>
-            <p>Catálogo de Carros</p>
-        </div>
+    
+    <?php require_once "_includes/topo.php"; ?>
 
-        <input type="checkbox" id="menu-hamburguer" class="input">
-
-        <label for="menu-hamburguer">
-            <div class="menu">
-                <span class="hamburguer"></span>
-            </div>
-        </label>
-
-        <ul>
-            <li><a href="index.php">Home</a></li>
-            <li><a href="#">Catálogo</a></li>
-            <li><a href="https://jonasnunes.github.io" target="_blank">Contato</a></li>
-        </ul>
-    </header>
     <main>
         <p>Aqui você encontra - <span class="name"></span></p>
         <section class="imagens">
@@ -37,9 +21,8 @@
             <img src="_imagens/logo-volks.png" alt="logo volkswagen">
         </section>
     </main>
-    <footer>
-        <p>Desenvolvido por <a href="https://github.com/jonasnunes" target="_blank">Jonas Nunes &copy;</a></p>
-    </footer>
+    
+    <?php require_once "_includes/rodape.php"; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="_scripts/index.js"></script>
