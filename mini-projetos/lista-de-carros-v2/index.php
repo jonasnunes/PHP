@@ -13,9 +13,20 @@
         <div>
             <p>Catálogo de Carros</p>
         </div>
-        <div>
-            ...
-        </div>
+
+        <input type="checkbox" id="menu-hamburguer" class="input">
+
+        <label for="menu-hamburguer">
+            <div class="menu">
+                <span class="hamburguer"></span>
+            </div>
+        </label>
+
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="#">Catálogo</a></li>
+            <li><a href="https://jonasnunes.github.io" target="_blank">Contato</a></li>
+        </ul>
     </header>
     <main>
         <p>Aqui você encontra - <span class="name"></span></p>
