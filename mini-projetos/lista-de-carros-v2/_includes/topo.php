@@ -17,7 +17,7 @@
 
         echo "<ul>";
             echo "<li><a href='index.php'>Home</a></li>";
-            echo "<li><a href='#'>Catálogo</a></li>";
+            echo "<li><a href='catalogo.php'>Catálogo</a></li>";
             echo "<li><a href=$link target='_blank'>Contato</a></li>";
         echo "</ul>";
     echo "</header>";

@@ -5,3 +5,4 @@ const typed = new Typed('.name', {
     backDelay: 500,
     loop: true
   });
+

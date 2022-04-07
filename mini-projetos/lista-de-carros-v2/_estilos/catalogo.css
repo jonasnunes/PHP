@@ -1,0 +1,41 @@
+#catalogo{
+    margin: 5rem 0 2rem;
+    text-align: center;
+}
+
+form{
+    margin: 1rem;
+}
+
+.box{
+    display: grid;
+    justify-content: center;
+}
+
+.erro{
+    margin-top: 2rem;
+}
+
+.detalhes{
+    margin: 2rem 0;
+    border: 1px solid #000;
+    width: 300px;
+    box-sizing: border-box;
+    border-radius: .5rem;
+}
+
+.detalhes p{
+    padding: 1rem;
+}
+
+.detalhes p:first-child{
+    border-radius: .5rem .5rem 0 0;
+}
+
+.detalhes p:nth-child(odd){
+    background-color: #c3c3c3;
+}
+
+.destaque{
+    font-weight: bold;
+}
