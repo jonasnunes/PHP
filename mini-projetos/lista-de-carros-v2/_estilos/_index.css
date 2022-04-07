@@ -24,6 +24,18 @@ header p{
     letter-spacing: .1rem;
 }
 
+header ul{
+    text-align: center;
+}
+
+header ul li a:hover{
+    color: #fff;
+    background-color: #000;
+    padding: .8rem;
+    border-radius: .5rem;
+    transition: 1s;
+}
+
 /* CRIAÇÃO DO MENU HAMBURGUER */
 
 .menu{
