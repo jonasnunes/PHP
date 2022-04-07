@@ -118,7 +118,6 @@ ul a{
 
 main{
     margin: 2rem auto;
-    width: 80%;
 }
 
 main p{
@@ -130,7 +129,7 @@ main p{
 
 .imagens{
     display: grid;
-    justify-content: center;
+    place-items: center;
 }
 
 img{
@@ -152,4 +151,11 @@ footer a{
 
 footer a:hover{
     text-decoration: underline;
+}
+
+@media(min-width: 600px){
+    #corpo, header{
+        max-width: 70%;
+        margin: auto;
+    }
 }
